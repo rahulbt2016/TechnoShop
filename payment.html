@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Adding favicon to the page-->
+        <link rel="shortcut icon" href="images/logo3.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--Page title-->
+        <title>TechnoShop | Login </title>
+        <!--CSS files-->
+        <link rel="stylesheet" href="styles/reg.css">
+        <link rel="stylesheet" href="styles/header-footer-nav.css">
+        <!--Javascript file-->
+        <script src="js/pay.js"></script>
+    </head>
+    <body>
+         <!--Consistent Header-->
+         <header>
+            <img id="technoshop-logo" src="images/logo3.png" alt="TechnoShop logo">
+            <div>
+                <h1>TechnoShop</h1>
+                <p id ="tag-line">Shopping at its best</p>
+            </div>
+            <img id="header-gif"  src="images/logo.gif" alt="Happy Shopping">    
+        </header>
+
+        <!--Consistent Navigation Bar-->
+        <nav>
+            <ul>            
+                <li><a href="#">Home</a></li>
+                <li><a href="my-account.html">My account</a></li>
+                <li>
+                    <a href="#">Shop</a>
+                    <ul class="drop-down">
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Home Appliances</a></li>
+                        <li><a href="electronic-devices.html">Electronic Devices</a></li>
+                        <li><a href="#">Grocery</a></li>
+                    </ul>
+                </li>    
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">My Cart</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Register.html">Register</a></li>
+            </ul>
+        </nav>
+        <div class="wrap">
+            <h2>Payment Page</h2>
+            <form name="pay" method="get" onsubmit="return validateForm()">
+                <h3>Acccount</h3>
+                <div class="input-gp">
+                    <div class="input-box">
+                        <input name="fname" type="text" placeholder="First Name" class="name">
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input name="fname" type="text" placeholder="Last Name" class="name">
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                </div>
+                <div class="input-gp">
+                    <div class="input-box">
+                        <input type="email" placeholder="Email Address" class="name">
+                    </div>
+                </div>
+                <div class="input-gp">
+                    <div class="input-box">
+                        <h3>Date of Birth</h3>
+                        <input type="text" placeholder="DD" class="dob">
+                        <input type="text" placeholder="MM" class="dob">
+                        <input type="text" placeholder="YYYY" class="dob">
+                    </div>
+                    <div class="input-box">
+                        <h3>Gender</h3>  
+                        <input type="radio" id="b1" name="Gender" checked class="radio">
+                        <label for="b1">Male</label>
+                        <input type="radio" id="b2" name="Gender" class="radio">
+                        <label for="b2">Female</label>
+                        <input type="radio" id="b3" name="Gender" class="radio">
+                        <label for="b3">Others</label>
+                    </div>
+                </div>
+                <div class="input-gp">
+                    <div class="input-box">
+                        <h3>Payment Details</h3>
+                        <input type="radio" id="p1" name="pay" checked class="radio">
+                        <label for="p1"><span><i class="fa fa-cc-visa"></i>Credit/Debit Card</span></label>
+                        <input type="radio" id="p2" name="pay" class="radio">
+                        <label for="p2"><span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
+                    </div>
+                </div>
+                <div class="input-gp">
+                    <div class="input-box">
+                        <input name="cardn" type="tel" placeholder="Card Number" class="name">
+                        <i class="fa fa-credit-card icon"></i>
+                    </div>
+                </div>
+                <div class="input-gp">
+                    <div class="input-box">
+                        <input name="cvcnum" type="tel" placeholder="Card CVC" class="name">
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                    
+                    <div class="input-box">
+                        <select>
+                            <option>01 Jan</option>
+                            <option>02 Jan</option>
+                            <option>03 Jan</option>
+                        </select>
+                        <select>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-gp">
+                    <div class="input-box">
+                        <button type="submit">Pay Now</button>
+                    </div>
+                </div>
+                </form>
+        </div>
+        
+        <!--Consistent Footer-->
+        <footer>
+        <!--About us section of footer-->
+        <div id = "footer-about-us">
+            <img src="images/logo1.png" alt="TechnoShop logo">
+            <p><span>ADDRESS:</span> 777 Albion Road, Etobicoke, <br> M9V 2J1, ON, Canada</p>
+            <p><span>PHONE:</span> +1 437-991-7639</p>
+            <p><span>EMAIL:</span> technoshop@studybuddies.com</p>
+        </div>
+        
+        <!--Useful links to navigate the website-->
+        <div id = "footer-navigation">
+            <h4>Navigate:</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="my-account.html">My Account</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">My Cart</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#">Register</a></li>
+            </ul>
+        </div>
+        
+        <!--Useful links to shop in different categories-->
+        <div id = "footer-shop">
+            <h4>Shop:</h4>
+            <ul>
+                <li><a href="#">Clothing</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="#">Home Appliances</a></li>
+                <li><a href="electronic-devices.html">Electronic Devices</a></li>
+                <li><a href="#">Grocery</a></li>
+            </ul>
+        </div>
+        
+        <!--List of team members of the project and links to social media handles-->
+        <div id = "footer-team-members">
+            <h4>Team Members:</h4>
+            <ul>
+                <li>Mansi Patel (Team lead)</li>
+                <li>Rahul Tiwari</li>
+                <li>Raina Patel</li>
+                <li>Raveena Katariya</li>
+                <li>Rohan Patel</li>
+            </ul>
+        
+            <h4>Follow us:</h4>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+        </div>
+                    
+        <!--Copyright-->
+        <div id = "footer-copyright">
+            Copyright &copy; 2021 Study Buddies 
+        </div>
+    </footer>
+        
+    </body>
+</html>
