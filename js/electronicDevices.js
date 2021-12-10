@@ -67,5 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 */
         }); 
     });  
+
+    //Disappearing add to cart message on click
+    document.getElementById('new-cart-item').addEventListener('click', () => {
+        document.getElementById('new-cart-item').style.display = 'none';
+    });
+
 });
 

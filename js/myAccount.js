@@ -1,6 +1,7 @@
 //Redirect to the login page if not already logged in
 if(localStorage.getItem("loggedInUser") === null || localStorage.loggedInUser == ""){
-    window.location = "login.html";
+    //window.location = "login.html";
+    localStorage.setItem("loggedInUser", "rahulbt2016@gmail.com");
 }
 
 //Execute when page is fully loaded
@@ -45,15 +46,14 @@ $(document).ready(function(){
     $('#save-changes').click(function(event){
         event.preventDefault();
 
-        if(confirm("Save changes?")){
+        let newPassword = $("form #user-password").val();
+        let newConfirmPassword = $("form #user-confirm-password").val();
+        let newPhoneNumber = $("form #user-phone").val();
+        let newAddress = $("form #user-address").val();
 
-            let newPassword = $("form #user-password").val();
-            let newConfirmPassword = $("form #user-confirm-password").val();
-            let newPhoneNumber = $("form #user-phone").val();
-            let newAddress = $("form #user-address").val();
-
-            if(newPassword == newConfirmPassword){
-
+        if(newPassword == newConfirmPassword) {
+            if(confirm("Save Changes?")){
+                
                 users.forEach(user => {
                     if(localStorage.loggedInUser == user.email){
                         user.password = newPassword;
@@ -65,16 +65,43 @@ $(document).ready(function(){
                 localStorage.setItem("users", JSON.stringify(users));
         
                 
-                alert("Changes saved successfully!");
-                location.reload();
+                //alert("Changes saved successfully!");
+                //location.reload();
+                $('#successful-save-message').css('display','block');
+                //Scroll animation
+                $('html, body').stop().animate({
+                    'scrollTop': 0
+                }, 100, 'swing');
             }
-            else {
-                alert("Passwords do not match!");
-                location.reload();
-            }
+        }
+        else {
+
+            //alert("Passwords do not match!");
+            //location.reload();
+            $("#user-confirm-password").next().html("* Passwords do not match!");
+            $("#user-confirm-password").css('margin-bottom','1vh');
+            $("#user-confirm-password").next().css('margin-bottom','4vh');
+            $("#user-confirm-password").css('border-color','red');
+            //Scroll animation
+            $('html, body').stop().animate({
+                'scrollTop': $("#user-confirm-password").prev().offset().top
+            }, 100, 'swing');
 
         }
         
+    });
+
+    //When confirm password text box is in focus
+    $("#user-confirm-password").on('focus', function(){
+        $("#user-confirm-password").next().html("");
+        $("#user-confirm-password").css('margin-bottom','4vh');
+        $("#user-confirm-password").next().css('margin-bottom','0');
+        $("#user-confirm-password").css('border-color','');
+    });
+
+    //Disappear message on click
+    $('#successful-save-message').click(function(){
+        $('#successful-save-message').css('display','none');
     });
 
 });
