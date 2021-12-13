@@ -1,53 +1,99 @@
-//Funtion that is called on clicking submit button
-function validateForm()
-{
-    //the statements calls the different function and checks the validation 
-    if(validateUname()){
-        if(validateEmail()){
-            if(validatePassword())
-            {}
-        }
-    }
-    return false;
-}
-//Funtion to check the Username
-function validateUname()
-{
-    //Condtion that checks wheather Username is entered correctly
-    if (/^[A-Za-z]+$/.test(register.fname.value))
-    {
-      return (true)
-    }
-    alert("Username must have alphabet characters only")
-    return (false)
-}  
+'use strict';
 
-//Funtion to check the emailid 
-function validateEmail()
-{
-    //Condition that checks weather emailid entered is in correct form! 
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(register.email.value))
-    {
-      return (true)
-    }
-    alert("You have entered an invalid email address!")
-    return (false)
-}   
+const $ = (selector) => document.querySelector(selector);
 
-//Function to check the password and repeat password
-function validatePassword()
+const processEntries = () => {
+// get form controls to check for validity
+const uname = $('#fname');
+const email = $('#e-mail');
+const password = $('#psw');
+const rpassword = $('#psw-repeat');
+
+// check user entries for validity
+
+//username validation
+let isValid = true;
+if (uname.value == '')
 {
-    var password = document.getElementById("psw").value;
-        var rptPassword = document.getElementById("psw-repeat").value;
-        //Condition that checks the password and repeat password are same!
-        if (password == rptPassword) 
-        {
-            alert("Registered Successfully!");
-            return true;
-        }
-        else
-        {  
-            alert("Password not matched!")
-            return false;
-        } 
+    uname.nextElementSibling.textContent = 'This field is required.';
+    isValid = false;
 }
+else if (!uname.value.match(/^[A-Za-z]+$/))
+{
+    uname.nextElementSibling.textContent = 'This field must have alphabet characters only.';
+    isValid = false;
+} 
+else 
+{
+    uname.nextElementSibling.textContent = '';
+}
+
+//Email Validation
+if (email.value == '')
+{
+    email.nextElementSibling.textContent = 'This field is required.';
+    isValid = false;
+}
+else if (!email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+{
+    email.nextElementSibling.textContent = 'Enter Valid E-mail Id.';
+    isValid = false;
+} 
+else 
+{
+    email.nextElementSibling.textContent = '';
+}
+
+//Password Validation
+if (password.value == '')
+{
+    password.nextElementSibling.textContent = 'This field is required.';
+    isValid = false;
+}
+else if (password.value.length <8 || password.value.length>12)
+{
+    password.nextElementSibling.textContent = 'Password must be in length of 8-12';
+    isValid = false;
+} 
+else 
+{
+    password.nextElementSibling.textContent = '';
+}
+ 
+//Confirm Password Validation
+if (rpassword.value == '')
+{
+    rpassword.nextElementSibling.textContent = 'This field is required.';
+    isValid = false;
+} 
+else if(password.value!=rpassword.value)
+{
+    rpassword.nextElementSibling.textContent = 'Confirm the password again.';
+    isValid = false;
+}
+else 
+{
+    rpassword.nextElementSibling.textContent = '';
+}
+
+//Submit the form if all the fields are valid
+if (isValid == true) {
+    $('form').submit();
+  }
+};
+
+//Reset the form 
+const resetForm = () => {
+    $('form').reset();
+    $('#fname').nextElementSibling.textContent = '*';
+    $('#e-mail').nextElementSibling.textContent = '*';
+    $('#psw').nextElementSibling.textContent = '*';
+    $('#psw-repeat').nextElementSibling.textContent = '*';
+    $('#fname').focus();
+  };
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    $('#btn1').addEventListener('click', processEntries);
+    $('#btn2').addEventListener('click', resetForm);
+    $('#fname').focus();
+  });

@@ -7,11 +7,8 @@
         <!--Adding favicon to the page-->
         <link rel="shortcut icon" href="images/logo3.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        <!--Page title-->
-        <title>TechnoShop | Login </title>
+       <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">-->
         <!--CSS files-->
-        
         <link rel="stylesheet" href="styles/header-footer-nav.css">
         <link rel="stylesheet" href="styles/sc.css">
         
@@ -28,85 +25,45 @@
         </header>
         <!-- Used Nav tag for navigation-->
         <nav>
-            <ul>
-                
+            <ul>       
+                <li id="logged-in-user"></li>     <!--Hidden element, which only appears when user logged-in -->  
                 <li><a href="home.html">Home</a></li>
-                <li><a href="#">My account</a></li>
+                <li><a href="my-account.html">My account</a></li>
                 <li>
                     <a href="#">Shop</a>
                     <ul class="drop-down">
-                        <li><a href="#">Clothing</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Home Appliances</a></li>
+                        <li><a href="clothes.html">Clothing</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="homeappliances.html">Home Appliances</a></li>
                         <li><a href="electronic-devices.html">Electronic Devices</a></li>
-                        <li><a href="#">Grocery</a></li>
+                        <li><a href="Groceryitem.html">Grocery</a></li>
                     </ul>
-                </li>
-
+                </li>    
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="shoppingcart.html">My Cart</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="Register.html">Register</a></li>
+                <li><a href="Contactus.html">Contact us</a></li>
+                <li id="login"><a href="login.html">Login</a></li>
+                <li id="register"><a href="Register.html">Register</a></li>
+                <li id="logout"><a href="#">Logout</a></li>
+                
             </ul>
-    </nav>
+        </nav>
     <div class="container">
         <h1><u>SHOPPING CART</u></h1>
-        <!-- Creating Div to show first image present in cart-->
+        <!-- Creating Div to show  image present in cart-->
         <div class="cart">
-            <div id="products">
-                <div id="product">
-                    <img src="images/cart/electronics_waffle baker.jpg">
-                    <div id="product-info">
-                        <h3 id="product-name">Electronics Waffle Baker</h3>
-                        <h2 id="product-price">$57.5</h2>
-                        <h2 id="product-offer">50%</h2>
-                        <p id="product-quantity">Qnt: <input value="1" name="" ></p>
-                       <!-- <p class="product-remove">
-                            <i class="fas fa-trash-alt" aria-hidden="true"></i>
-                            <span>Remove</span>
-                        </p> -->
-                        <button id="product-remove" onclick="return validateFormm()">
-                            <i class="fas fa-trash-alt" aria-hidden="true"></i>
-                            Remove
-                        </button>
-                    </div>
-                </div>
-                <!-- Creating 2nd div to show second item in cart-->
-                <div id="products">
-                    <div id="product1">
-                        <img src="images/cart/electonics_coffeemaker.webp">
-                        <div id="product1-info">
-                            <h3 id="product1-name">Electronics Coffee Maker</h3>
-                            <h2 id="product1-price">$40.5</h2>
-                            <h2 id="product1-offer">50%</h2>
-                            <p id="product1-quantity">Qnt: <input value="1" name=""></p>
-                            <!-- <p class="product-remove">
-                                <i class="fas fa-trash-alt" aria-hidden="true"></i>
-                                <span>Remove </span>
-                            </p> -->
-                            <button id="product1-remove" onclick="return validateForm()">
-                                <i class="fas fa-trash-alt" aria-hidden="true"></i>
-                                Remove
-                            </button>
-                        </div>
-                    </div>
-            </div>
+            <div class="products"></div>
+        </div>
+            
             <!-- Displaying the total of items-->
             <div class="cart-total">
+                <div>
                 <p>
                     <span>Total Price </span>
-                    <span>$98.00</span>
+                    <span class="abc">$00.00</span>
                 </p>
-                <p>
-                    <span>Number of Items </span>
-                    <span>2</span>
-                </p>
-                <p>
-                    <span>You Saved </span>
-                    <span>$20.00</span>
-                </p>
-                <button class="b" onclick="return validateCart()"><a href="#">Proceed to Checkout</a></button>
+                </div>
+                <button class="b"><a href="checkout.html">Proceed to Checkout</a></button>
             </div>
         </div>
     </div>
@@ -121,13 +78,13 @@
         <div id = "footer-navigation">
             <h4>Navigate:</h4>
             <ul>
-                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">My Account</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="shoppingcart.html">My Cart</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">My Cart</a></li>
                 <li><a href="#">Contact us</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="Register.html">Register</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
             </ul>
         </div>
         <div id = "footer-shop">
@@ -160,6 +117,7 @@
         </div>
     </footer>
     <!-- Script tag to apply js in my page-->
-    <script src="js/sc.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/lss.js"></script>
 </body>
 </html>

@@ -19,8 +19,8 @@ function validateEmail(){
         return false;
     }
     else{
-        emailNode.nextElementSibling.innerHTML="";
-        emailNode.style.borderColor="";
+        emailNode.nextElementSibling.innerHTML="";  //Removing the error message
+        emailNode.style.borderColor="";     //Removes red border colour
         return true;    //Returns true only when the validation is successful
     }
 }
@@ -94,7 +94,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Redirecting to home page, if already logged-in
     if(!(localStorage.getItem("loggedInUser") === null) && localStorage.loggedInUser != ""){
-        window.location = "home.html";
+        /*----------Commenting this just for the evaluation purpose, else the page will redirect 
+        to other page when link of evaluation form opened-------------------------------------*/
+        //window.location = "home.html";
     }
 
     //Creating an array of objects (users)
@@ -156,12 +158,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
     //Removing the error message, when the email field is in focus
     $("#login-wrapper input[type='email']").addEventListener("focus", () => {
-        $("#login-wrapper input[type='email']").nextElementSibling.innerHTML="";
+        $("#login-wrapper input[type='email']").nextElementSibling.innerHTML=""; //Remove the error message
     });
     
     //Removing the error message, when the password field is in focus
     $("#login-wrapper input[type='password']").addEventListener("focus", () => {
-        $("#login-wrapper input[type='password']").nextElementSibling.innerHTML="";
+        $("#login-wrapper input[type='password']").nextElementSibling.innerHTML=""; //Remove the error message
     });
 
     //Invoking login function, when login button is clicked

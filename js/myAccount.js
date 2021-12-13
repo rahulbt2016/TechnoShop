@@ -1,5 +1,7 @@
 //Redirect to the login page if not already logged in
 if(localStorage.getItem("loggedInUser") === null || localStorage.loggedInUser == ""){
+    /*----------Commenting this just for the evaluation purpose, else the page will redirect 
+        to other page when link of evaluation form opened-------------------------------------*/
     //window.location = "login.html";
     localStorage.setItem("loggedInUser", "rahulbt2016@gmail.com");
 }

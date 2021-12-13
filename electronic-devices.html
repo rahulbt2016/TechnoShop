@@ -4,18 +4,24 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--TechnoShop logo in favicon-->
         <link rel="shortcut icon" href="images/logo3.png"/>
+        <!--Font awesome Icons-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
         <title>TechnoShop | Electronic Devices</title>
+        <!--CSS files-->
         <link rel="stylesheet" href="styles/main-rt.css">
         <link rel="stylesheet" href="styles/header-footer-nav.css">
+        <!--Java Script Files-->
         <script src="js/navigation.js"></script>
         <script src="js/electronicDevices.js"></script>
     </head>
     <body>
+        <!--Wrapper of the page-->
         <div id="electronic-devices-wrapper">
 
+            <!--Consistent Header-->
             <header>
                 <img id="technoshop-logo" src="images/logo3.png" alt="TechnoShop logo">
                 <div>
@@ -25,19 +31,20 @@
                 <img id="header-gif"  src="images/logo.gif" alt="Happy Shopping">    
             </header>
 
+            <!--Consistent Navigation Bar-->
             <nav>
                 <ul>       
-                    <li id="logged-in-user"></li>      
+                    <li id="logged-in-user"></li>     <!--Hidden element, which only appears when user logged-in -->  
                     <li><a href="home.html">Home</a></li>
                     <li><a href="my-account.html">My account</a></li>
                     <li>
                         <a href="#">Shop</a>
                         <ul class="drop-down">
                             <li><a href="clothes.html">Clothing</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Home Appliances</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
+                            <li><a href="homeappliances.html">Home Appliances</a></li>
                             <li><a href="electronic-devices.html">Electronic Devices</a></li>
-                            <li><a href="#">Grocery</a></li>
+                            <li><a href="Groceryitem.html">Grocery</a></li>
                         </ul>
                     </li>    
                     <li><a href="faq.html">FAQ</a></li>
@@ -50,10 +57,12 @@
                 </ul>
             </nav>
 
+            <!--Sub-header-->
             <div id="sub-header">
                 <h1>Electronic Devices</h1>
             </div>   
             
+            <!--Secondaey navigation bar-->
             <nav id = "nav-2">
                 <ul>
                     <li><a href="#smart-phone">Smart Phone</a></li>
@@ -66,15 +75,19 @@
                 </ul>
             </nav>
 
+            <!--Main content-->
             <main>
+                <!--Search bar-->
                 <input type="text" id="search-input" placeholder="Search for products...">
 
+                <!--Hidden element to display item added in cart, when add to cart button clicked-->
                 <div id="new-cart-item">
                     <img src="" class="" alt="Product Image">
                     <div id="added-to-cart-message"><span class="fa fa-check-circle"></span>Added to cart</div>
                     <p></p>
                 </div>
                 
+                <!--Smart Phones-->
                 <h2 class="sub-category-title" id="smart-phone">Smart Phone</h2>
                 <div class="sub-category">
                     <div class="product-wrapper">
@@ -182,7 +195,8 @@
                 </div>
 
                 <hr>
-    
+                
+                <!--Laptops-->
                 <h2 class="sub-category-title" id="laptop">Laptop</h2>
                 <div class="sub-category">
                     <div class="product-wrapper">
@@ -257,6 +271,7 @@
                     
                 <hr>
 
+                <!--Smart Watches-->
                 <h2 class="sub-category-title"  id="smart-watch">Smart Watch</h2>
                 <div class="sub-category">
                     <div class="product-wrapper">
@@ -315,7 +330,7 @@
                     
                 <hr>
 
-
+                <!--Televisions-->
                 <h2 class="sub-category-title" id="television">Television</h2>
                 <div class="sub-category">
                     <div class="product-wrapper">
@@ -401,7 +416,7 @@
 
                 <hr>
 
-                    
+                <!--Speakers-->    
                 <h2 class="sub-category-title" id="speaker">Speaker</h2>
                 <div class="sub-category">
                     <div class="product-wrapper">
@@ -449,6 +464,7 @@
                     
                 <hr>
 
+                <!--Headphones-->
                 <h2 class="sub-category-title" id="headphone">Headphone</h2>
                 <div class="sub-category">
                     
@@ -544,6 +560,7 @@
                     
                 <hr>
 
+                <!--Electronic Accessories-->
                 <h2 class="sub-category-title" id="electronic-accessories">Electronic Accessories</h2>
                 <div class="sub-category">
                         
@@ -672,6 +689,7 @@
 
             </main>
 
+            <!--Consistent Footer-->
             <footer>
                     <div id = "footer-about-us">
                         <img src="images/logo1.png" alt="TechnoShop logo">
@@ -699,10 +717,10 @@
                         <h4>Shop:</h4>
                         <ul>
                             <li><a href="clothes.html">Clothing</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Home Appliances</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
+                            <li><a href="homeappliances.html">Home Appliances</a></li>
                             <li><a href="electronic-devices.html">Electronic Devices</a></li>
-                            <li><a href="#">Grocery</a></li>
+                            <li><a href="Groceryitem.html">Grocery</a></li>
                         </ul>
                     </div>
 

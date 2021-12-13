@@ -1,125 +1,81 @@
 /* Css for shopping cart page*/
 .cs{
     border: 2px solid;
-      background-color: #fdfcc2;
+    background-color: #fdfcc2;
 }
 .container{
-      
+        
       margin: 0 auto;
   }
   
   .container > h1{
+      
+      justify-content: center;
+      align-items: center;
       margin-left: 450px;
-      padding: 20px 0;;
+      padding: 20px 0;
   }
   .cart{
-      display: flex;
+      
       margin-left: 300px;
   }
-#product{
-      display: flex;
+
+ .cartList img{
+    
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    height: 200px;
+    object-fit: cover;
+ }
+.cartList{
+    display: flex;
       width: 80%;
       height: 200px;
       border: 1px solid black;
       margin-bottom: 20px;
 }
-#product:hover{
+.cartList:hover{
     border: none;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     transform: scale(1.01);
 }
-#product > img{
-      width: 275px;
-      height: 200px;
-      object-fit: cover;
-  }
 
-#product1{
-      display: flex;
-      width: 80%;
-      height: 200px;
-      border: 1px solid black;
-      margin-bottom: 20px;
-}
-#product1:hover{
-    border: none;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    transform: scale(1.01);
-}
-#product1 > img{
-      width: 275px;
-      height: 200px;
-      object-fit: cover;
-  }
- 
-
-
-  #products{
+  .products{
       flex: 0.75;
   }
-  
-  #product > img:hover{
-      transform: scale(1.04);
-  }
-  #product-info{
-      padding: 20px;
-      width: 100%;
-      position: relative;
-  }
-  #product-name, #product-price, #product-offer{
-      margin-bottom: 10px;
-  }
-  #product-remove{
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      padding: 10px 25px;
-      background-color: green;
-      color: white;
-      border-radius: 5px;
-  }
-  #product-remove:hover{
-      background-color: white;
-      color: green;
-      font-weight: 600;
-      border: 1px solid green;
-  }
-#product-quantity > input{
-      width: 40px;
-      padding: 5px;
-      text-align: center;
-}
-#product1 > img:hover{
-    transform: scale(1.04);
-}
-#product1-info{
+
+.info{
+
     padding: 20px;
     width: 100%;
     position: relative;
 }
-#product1-name, #product1-price, #product1-offer{
+.name,.price{
+    
     margin-bottom: 10px;
 }
-#product1-remove{
+.r button{
+    
+   
     position: absolute;
     bottom: 20px;
     right: 20px;
     padding: 10px 25px;
     background-color: green;
     color: white;
-    border-radius: 5px;
+    border-radius: 5px; 
 }
-#product1-remove:hover{
+.r button:hover{
     background-color: white;
-    color: green;
-    font-weight: 600;
-    border: 1px solid green;
+      color: green;
+      font-weight: 600;
+      border: 1px solid green;
 }
-#product1-quantity > input{
-    width: 40px;
-    padding: 5px;
-    text-align: center;
-}
+.product1-quantity{
+    width:30%
+} 
+
 .fa{
     margin-right: 5px;
 }
@@ -131,16 +87,22 @@
     
 }
 .cart-total p{
+    padding: 20px 0;
+    margin-left: 300px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
     font-size: 20px;
 }
+.abc{
+    margin-right: 200px;
+}
 .cart-total a{
     color: white;
 }
 .b{
-    margin-left: 250px;
+    
+    margin-left: 500px;
     background-color: tomato;
      height: 50px;
     width: 150px;
@@ -213,6 +175,22 @@
     margin-bottom: 20px;
     opacity: 0.9;
 }
+.send{
+    float: right;
+    background: #2E94E3;
+    color: white;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background;
+}
 .cf .send-btn{
     float: right;
     background: #2E94E3;
@@ -229,12 +207,22 @@
     transition: 0.3s;
     transition-property: background;
 }
+.send:hover{
+    background: #0582E3;
+}
 .cf .send-btn:hover
 {
     background: #0582E3;
 }
+span{
+    color: red;
+}
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:600px) {
+    .cartList{
+        margin:0;
+        width: 50%;
+    }
 .cs{
         flex-direction: column;
  }
@@ -249,4 +237,42 @@
 .cf .text-box{
     width: 100%;
 }
+.container{
+    display: flex;
+    flex-direction: column;
+    
+    flex-wrap: wrap;
+}
+.container h1{
+    flex-direction: column;
+}
+.cart{
+    
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+.cartList img{
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100px;
+    object-fit: cover;
+}
+.r{
+    flex-direction: column;
+    
+}
+.product1-quantity{
+    width:30%
+}
+.cartList{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.info{
+    padding: 10px;
+}
+    
+
 }

@@ -10,10 +10,11 @@
         <!--Page title-->
         <title>TechnoShop | Register </title>
         <!--CSS files-->
-        <link rel="stylesheet" href="styles/reg.css">
+        <link rel="stylesheet" href="styles/main1-rp.css">
         <link rel="stylesheet" href="styles/header-footer-nav.css">
         <!--Javascript file-->
-        <script src="js/register.js"></script>
+        <script src="js/navigation.js"></script>
+        
     </head>
     <body>
          <!--Consistent Header-->
@@ -28,55 +29,71 @@
 
         <!--Consistent Navigation Bar-->
         <nav>
-            <ul>            
+            <ul>       
+                <li id="logged-in-user"></li>     <!--Hidden element, which only appears when user logged-in -->  
                 <li><a href="home.html">Home</a></li>
                 <li><a href="my-account.html">My account</a></li>
                 <li>
                     <a href="#">Shop</a>
                     <ul class="drop-down">
-                        <li><a href="#">Clothing</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Home Appliances</a></li>
+                        <li><a href="clothes.html">Clothing</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="homeappliances.html">Home Appliances</a></li>
                         <li><a href="electronic-devices.html">Electronic Devices</a></li>
-                        <li><a href="#">Grocery</a></li>
+                        <li><a href="Groceryitem.html">Grocery</a></li>
                     </ul>
                 </li>    
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="shoppingcart.html">My Cart</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="Register.html">Register</a></li>
+                <li><a href="Contactus.html">Contact us</a></li>
+                <li id="login"><a href="login.html">Login</a></li>
+                <li id="register"><a href="Register.html">Register</a></li>
+                <li id="logout"><a href="#">Logout</a></li>
+                
             </ul>
         </nav>
-        <form style="border:1px solid #ccc" name="register" onsubmit="return validateForm()" method="post">
+
+        <!--Main Content of  page-->
+        <form action="home.html" style="border:1px solid #ccc" method="get">
             <div class="wrapper">
                 <h2>Register Yourself Here</h2>
-                <p>Please fill in this form to create an account.</p>
+                <p id="para">Please fill in this form to create an account.</p>
                 <hr>
-                <label for="fname"><b>FULL NAME</b></label>
-                <input type="text" placeholder="Enter Full Name" name="fname" required>
+                <div id="n">
+                    
+                <label for="fname" ><b>FULL NAME</b></label>
+                <br>
+                <input type="text" id="fname" placeholder="Enter Full Name" name="fname" autocomplete="off">
+                <span id="s1">&nbsp;&nbsp;&nbsp;&nbsp;*</span><br>
 
-                <label for="email"><b>EMAIL</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+                <label for="email" ><b>EMAIL</b></label>
+                <br>
+                <input type="text" id="e-mail"  placeholder="Enter Email" name="email"  autocomplete="off">
+                <span id="s1">&nbsp;&nbsp;&nbsp;&nbsp;*</span><br>
 
-                <label for="psw"><b>PASSWORD</b></label>
-                <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
-      
-                <label for="psw-repeat"><b>REPEAT PASSWORD</b></label>
-                <input type="password" id="psw-repeat" placeholder="Repeat Password" name="psw-repeat" required>
-      
+                <label  for="psw" ><b>PASSWORD</b></label>
+                <br>
+                <input  type="password" id="psw" placeholder="Enter Password" name="psw" autocomplete="off">
+                <span id="s1">&nbsp;&nbsp;&nbsp;&nbsp;*</span><br>
+                
+                <label  for="psw-repeat" ><b>REPEAT PASSWORD</b></label>
+                <br>
+                <input type="password" id="psw-repeat" placeholder="Repeat Password" name="psw-repeat" autocomplete="off">
+                <span id="s1">&nbsp;&nbsp;&nbsp;&nbsp;*</span><br>
+
                 <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember me
                 </label>
       
                 <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-      
+                </div>
                 <div class="btn">
-                    <input type="submit" name="submit" value="Submit" class="btn1">    
-                    <input type="reset" name="reset" value="Reset" class="btn2">
+                    <input type="button" value="Register" id="btn1">    
+                    <input type="button" value="Reset" id="btn2">
                 </div>
             </div>
         </form>
+        <script src="js/register.js"></script>
         <!--Consistent Footer-->
         <footer>
             <!--About us section of footer-->
@@ -95,7 +112,7 @@
                     <li><a href="my-account.html">My Account</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="shoppingcart.html">My Cart</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="Contactus.html">Contact us</a></li>
                     <li><a href="login.html">Login</a></li>
                     <li><a href="Register.html">Register</a></li>
                 </ul>
@@ -105,11 +122,11 @@
             <div id = "footer-shop">
                 <h4>Shop:</h4>
                 <ul>
-                    <li><a href="#">Clothing</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Home Appliances</a></li>
+                    <li><a href="clothes.html">Clothing</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="homeappliances.html">Home Appliances</a></li>
                     <li><a href="electronic-devices.html">Electronic Devices</a></li>
-                    <li><a href="#">Grocery</a></li>
+                    <li><a href="Groceryitem.html">Grocery</a></li>
                 </ul>
             </div>
 

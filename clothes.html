@@ -1,6 +1,6 @@
 <html>
     <title>
-        TechnoShop | Home
+        TechnoShop | Clothes
     </title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/home.css">  <!--css file linking-->
@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="technoshop.JPG">  <!--inserting favicon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/navigation.js"></script>
     <body>
         <div id="wrapper">
             <!--header-->
@@ -22,41 +23,46 @@
         
         <!--main navigation bar-->
         <nav>
-            <ul>            
-                <li><a href="#">Home</a></li>
+            <ul>       
+                <li id="logged-in-user"></li>     <!--Hidden element, which only appears when user logged-in -->  
+                <li><a href="home.html">Home</a></li>
                 <li><a href="my-account.html">My account</a></li>
                 <li>
                     <a href="#">Shop</a>
                     <ul class="drop-down">
                         <li><a href="clothes.html">Clothing</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Home Appliances</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="homeappliances.html">Home Appliances</a></li>
                         <li><a href="electronic-devices.html">Electronic Devices</a></li>
-                        <li><a href="#">Grocery</a></li>
+                        <li><a href="Groceryitem.html">Grocery</a></li>
                     </ul>
                 </li>    
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">My Cart</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="shoppingcart.html">My Cart</a></li>
+                <li><a href="Contactus.html">Contact us</a></li>
+                <li id="login"><a href="login.html">Login</a></li>
+                <li id="register"><a href="Register.html">Register</a></li>
+                <li id="logout"><a href="#">Logout</a></li>
+                
             </ul>
         </nav>
         <main id="mainclothes">
+            <!--side navigation bar -->
         <div class="sidenav">
             <button class="clothes1"><a href=clothes.html >CLOTHING</a></button>
             <button class="_women1"><a href=women.html >Women</a></button><br>
             <button class="men1"><a href=men.html>Men</a></button><br>
             <button class="kids1"><a href=kids.html>Kids</a></button><br>
         </div>
+        <!--discounts based on different clothing categories-->
         <div id="clothesdiv">
-            <a href="#"><img class="savemore" src="images/clothing/clothing1.jpg" alt="tops"></a> 
+            <a href="offer.html"><img class="savemore" src="images/clothing/clothing1.jpg" alt="tops"></a> 
         
         
-            <a href="#"><img class="latestdiscount" src="images/clothing/clothing2.jpg" alt="tops"></a> 
+            <a href="offer.html"><img class="latestdiscount" src="images/clothing/clothing2.jpg" alt="tops"></a> 
         
     
-            <a href="#"><img class="lifestylesale" src="images/clothing/clothing3.jpg" alt="tops"></a> 
+            <a href="offer.html"><img class="lifestylesale" src="images/clothing/clothing3.jpg" alt="tops"></a> 
         </div>
         </main>
         <!--Consistent Footer-->
@@ -73,13 +79,13 @@
             <div id = "footer-navigation">
                 <h4>Navigate:</h4>
                 <ul>
-                    <li><a href="home7.html">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="my-account.html">My Account</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">My Cart</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="shoppingcart.html">My Cart</a></li>
+                    <li><a href="Contactus.html">Contact us</a></li>
                     <li><a href="login.html">Login</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a href="Register.html">Register</a></li>
                 </ul>
             </div>
 
@@ -88,10 +94,10 @@
                 <h4>Shop:</h4>
                 <ul>
                     <li><a href="clothes.html">Clothing</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Home Appliances</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="homeappliances.html">Home Appliances</a></li>
                     <li><a href="electronic-devices.html">Electronic Devices</a></li>
-                    <li><a href="#">Grocery</a></li>
+                    <li><a href="Groceryitem.html">Grocery</a></li>
                 </ul>
             </div>
 

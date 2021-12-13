@@ -16,7 +16,8 @@
         
         <link rel="stylesheet" href="styles/header-footer-nav.css">
         <link rel="stylesheet" href="styles/sc.css">
-        <script src="js/sc.js"></script>
+        
+        
     </head>
     <body>
         <!-- Created header for my page-->
@@ -30,28 +31,30 @@
         </header>
         <!-- Used Nav tag for navigation-->
         <nav>
-            <ul>
-                
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">My account</a></li>
+            <ul>       
+                <li id="logged-in-user"></li>     <!--Hidden element, which only appears when user logged-in -->  
+                <li><a href="home.html">Home</a></li>
+                <li><a href="my-account.html">My account</a></li>
                 <li>
                     <a href="#">Shop</a>
                     <ul class="drop-down">
-                        <li><a href="#">Clothing</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Home Appliances</a></li>
+                        <li><a href="clothes.html">Clothing</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="homeappliances.html">Home Appliances</a></li>
                         <li><a href="electronic-devices.html">Electronic Devices</a></li>
-                        <li><a href="#">Grocery</a></li>
+                        <li><a href="Groceryitem.html">Grocery</a></li>
                     </ul>
-                </li>
-
-                <li><a href="#">FAQ</a></li>
+                </li>    
+                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="shoppingcart.html">My Cart</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="Contactus.html">Contact us</a></li>
+                <li id="login"><a href="login.html">Login</a></li>
+                <li id="register"><a href="Register.html">Register</a></li>
+                <li id="logout"><a href="#">Logout</a></li>
+                
             </ul>
-    </nav>
+        </nav>
+    <!--Main content-->   
     <div class="cs">
         <div class="ci">
             <div><i class="fa fa-map-marker"></i> 777 Albion Road, Etobicoke, <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -62,15 +65,26 @@
         </div>
         <div class="cf">
             <h2><u>Contact Us</u></h2>
-            <form class="contact" action="" method="POST" name="f1">
-                <input type="text" name="name" class="text-box" placeholder="Your Name" required>
-                <input type="email" name="email" class="text-box" placeholder="Your Email id" required>
+            <form class="contact" action="" method="get" name="f1" id="form">
+                <div class="input-control">
+                 <input type="text" id="name" name="name" class="text-box" placeholder="Your Name">
+                    <span>*</span>
+                </div>
+                <div class="input-control">
+                <input type="email" id="email" name="email" class="text-box" placeholder="Your Email id" required>
+                <span>*</span>
+                </div>
                 <textarea name="message" rows="5" placeholder="Your message please" required></textarea>
-                <input type="submit" name="submit" class="send-btn" value="SEND" 
-                onclick="return validate()">
+                <div>
+                <input class="send" type="button" id="Submit" value="Submit">
+                </div>
+            </form>
         </div>
     </div>
-
+    <!--JS files-->
+    <script src="js/navigation.js"></script> 
+    <script src="js/ss.js"></script>
+    <!--Footer tag for footer-->
     <footer>
         <div id = "footer-about-us">
             <img src="images/logo1.png" alt="TechnoShop logo">

@@ -1,6 +1,6 @@
 <html>
     <title>
-        TechnoShop | Home
+        TechnoShop | Clothes | Women
     </title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/home.css">  <!--css file linking-->
@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="technoshop.JPG">  <!--inserting favicon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/navigation.js"></script>
     <body>
         <div id="wrapper">
             <header>
@@ -21,24 +22,27 @@
         
         <!--main navigation bar-->
         <nav>
-            <ul>            
-                <li><a href="#">Home</a></li>
+            <ul>       
+                <li id="logged-in-user"></li>     <!--Hidden element, which only appears when user logged-in -->  
+                <li><a href="home.html">Home</a></li>
                 <li><a href="my-account.html">My account</a></li>
                 <li>
                     <a href="#">Shop</a>
                     <ul class="drop-down">
                         <li><a href="clothes.html">Clothing</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Home Appliances</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="homeappliances.html">Home Appliances</a></li>
                         <li><a href="electronic-devices.html">Electronic Devices</a></li>
-                        <li><a href="#">Grocery</a></li>
+                        <li><a href="Groceryitem.html">Grocery</a></li>
                     </ul>
                 </li>    
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">My Cart</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="shoppingcart.html">My Cart</a></li>
+                <li><a href="Contactus.html">Contact us</a></li>
+                <li id="login"><a href="login.html">Login</a></li>
+                <li id="register"><a href="Register.html">Register</a></li>
+                <li id="logout"><a href="#">Logout</a></li>
+                
             </ul>
         </nav>
         <main id="clothing_main">
@@ -48,28 +52,28 @@
             <button class="men"><a href=men.html>Men</a></button><br>
             <button class="kids"><a href=kids.html>Kids</a></button><br>
         </div>
-        <script src=js/clothing.js></script>
+        <!--PRODUCTS-->
         <div class="category">
         <div class="productlist clearfix">
             <div class="product clearfix">
                 <a href="#"><img class="image" src="images/clothing/top1.jpeg" alt="tops"></a> 
                 <h2>Cool Top</h2>
                 <h2>$40</h2>
-                <a href="#"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
+                <a href="shoppingcart.html"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
                 <p>White off shoulder top </p>
             </div>
             <div class="product clearfix">
                 <a href="#"><img class="image" src="images/clothing/top2.jpg" alt="tops"></a> 
-                <h2>Daily Top</h2>
+                <h2>DailyTop</h2>
                 <h2>$38</h2>
-                <a href="#"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
+                <a href="shoppingcart.html"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
                 <p>Simple high neck top.</p>
             </div>
             <div class="product clearfix">
                 <a href="#"><img class="image" src="images/clothing/top3.jpg" alt="tops"></a> 
                 <h2>Grey Top</h2>
                 <h2>$25</h2>
-                <a href="#"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
+                <a href="shoppingcart.html"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
                 <p>Elegant long sleeves top</p>
             </div>
         </div>
@@ -78,21 +82,21 @@
                 <a href="#"><img class="image" src="images/clothing/jeans1.jpg" alt="tops"></a> 
                 <h2>Jeans</h2>
                 <h2>$45</h2>
-                <a href="#"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
+                <a href="shoppingcart.html"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
                 <p>Regular blue denim jeans.</p>
             </div>
             <div class="product clearfix">
                 <a href="#"><img class="image" src="images/clothing/jeans2.jpg" alt="tops"></a> 
                 <h2>Denim</h2>
                 <h2>$56</h2>
-                <a href="#"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
+                <a href="shoppingcart.html"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
                 <p>Blue ankle-fit jeans.</p>
             </div>
             <div class="product clearfix">
                 <a href="#"><img class="image" src="images/clothing/jeans3.jpg" alt="tops"></a> 
                 <h2>Jeans</h2>
                 <h2>$50</h2>
-                <a href="#"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
+                <a href="shoppingcart.html"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
                 <p>Blue denim ripped jeans</p>
             </div>
         </div>
@@ -101,21 +105,21 @@
                 <a href="#"><img class="image" src="images/clothing/winter1.jpg" alt="tops"></a> 
                 <h2>Coat</h2>
                 <h2>$40</h2>
-                <a href="#"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
+                <a href="shoppingcart.html"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
                 <p>Warm white coat</p>
             </div>
             <div class="product clearfix">
                 <a href="#"><img class="image" src="images/clothing/winter2.jpg" alt="tops"></a> 
                 <h2>Coat</h2>
                 <h2>$40</h2>
-                <a href="#"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
+                <a href="shoppingcart.html"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
                 <p>Warm brown coat</p>
             </div>
             <div class="product clearfix">
                 <a href="#"><img class="image" src="images/clothing/winter3.jpg" alt="tops"></a> 
                 <h2>Top</h2>
                 <h2>$40</h2>
-                <a href="#"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
+                <a href="shoppingcart.html"><img class="addtocart" src="images/clothing/addtocart.jpg" onclick="addtocart()"></a>
                 <p>Warm brown top</p>
             </div>
         </div>
@@ -136,13 +140,13 @@
             <div id = "footer-navigation">
                 <h4>Navigate:</h4>
                 <ul>
-                    <li><a href="home7.html">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="my-account.html">My Account</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">My Cart</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="shoppingcart.html">My Cart</a></li>
+                    <li><a href="Contactus.html">Contact us</a></li>
                     <li><a href="login.html">Login</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a href="Register.html">Register</a></li>
                 </ul>
             </div>
 
@@ -151,10 +155,10 @@
                 <h4>Shop:</h4>
                 <ul>
                     <li><a href="clothes.html">Clothing</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Home Appliances</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="homeappliances.html">Home Appliances</a></li>
                     <li><a href="electronic-devices.html">Electronic Devices</a></li>
-                    <li><a href="#">Grocery</a></li>
+                    <li><a href="Groceryitem.html">Grocery</a></li>
                 </ul>
             </div>
 
@@ -181,7 +185,7 @@
                 Copyright &copy; 2021 Study Buddies 
             </div>
     </footer>
-    
+    <script src=js/clothing.js></script>
 </body>
         
 </html>    

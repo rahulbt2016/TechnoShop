@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
             let productName = addToCartButton.parentNode.querySelector('p').innerHTML;
             let productImageSource = addToCartButton.parentNode.querySelector('img').getAttribute('src');
             let productImageClass = addToCartButton.parentNode.querySelector('img').getAttribute('class');
-
+            let productCost = addToCartButton.parentNode.querySelector('p').nextElementSibling.innerHTML;
+            
             //Showing add to cart message on the top of page
             let addToCartMessageNode = document.getElementById('new-cart-item');
             addToCartMessageNode.style.display='grid';
@@ -47,24 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector('#sub-header').scrollIntoView();
 
 
-            //let productCost = addToCartButton.parentNode.querySelector('p').nextElementSibling;
-            //alert( productName.innerHTML + " added to cart!");
-
-            /* if(localStorage.getItem('shoppingCart') === null){
-                localStorage.setItem('shoppingCart', '')
+            //Adding Product in the Local Storage
+            let product = {
+                image: productImageSource,
+                title: productName,
+                price: productCost,
+                quantity : 1
             }
+            addItemtoLocal(product);
 
-            let shoppingCartArray = [];
-            if(localStorage.shoppingCart != '')
-                shoppingCartArray = JSON.parse(localStorage.shoppingCart);
-
-            newItem = {productName: productName.innerHTML,
-                       productCost: productCost.innerHTML,
-                       discount: 0}
-            
-            shoppingCartArray.push(newItem);
-            localStorage.setItem('shoppingCart',JSON.stringify(shoppingCartArray));
-                */
         }); 
     });  
 
@@ -75,3 +67,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+//Adds a product information in the local storage, when add to cart button clicked
+function addItemtoLocal(product){
+    let productInCartFlag = false;
+    let cartItem = JSON.parse(localStorage.getItem('prdInCart'))
+    if(cartItem === null){
+        let products = [];
+        products.push(product)
+        localStorage.setItem('prdInCart',JSON.stringify(products))
+    }
+    else{
+        cartItem.forEach(item =>{
+            if(product.title == item.title){
+                productInCartFlag = true;
+                item.quantity++;
+            }
+        });
+
+        if(!productInCartFlag) {
+            cartItem.push(product);
+        }   
+
+        localStorage.setItem('prdInCart', JSON.stringify(cartItem));
+    }
+}
